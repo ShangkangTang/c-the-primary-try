@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int x;
+	cout << "你考试考了多少分？（0～100）" << endl;
+	cin >> x  ;
+	
+	if (x < 0 || x>100)
+	{
+		cout << "输入错误，请重新输入" << endl;
+	}
+	else
+	{
+		cout << "您的成绩等级为：";
+		if (x < 60)
+			cout << "您的成绩等级为：差" << endl;
+		else
+		{
+			if (x < 80)
+				cout << "中" << endl;
+			else
+			{
+				if (x < 90)
+					cout << "良" << endl;
+				else
+					cout << "优" << endl;
+			}
+		}
+	}
+	return 0;
+}
