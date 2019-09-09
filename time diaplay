@@ -1,0 +1,28 @@
+#include<iostream>
+
+using namespace std;
+typedef struct
+{
+	int year;
+	int month;
+	int day;
+	int hour;
+	int minute;
+	int second;
+
+}Time;
+void In(Time &L)
+{
+	cout << "请输入现在为_年_月_日_时_分_秒" << endl;
+	cin >> L.year >> L.month >> L.day>>L.hour>>L.minute>>L.second;
+}
+void Out(Time &L)
+{
+	cout << "现在为：" << L.year << "年" << L.month << "月" << L.day << "日" <<L.hour<<"时"<<L.minute<<"分"<<L.second<<"秒"<< endl;
+}
+int main()
+{
+	Time L;
+	In(L);
+	Out(L);
+}
