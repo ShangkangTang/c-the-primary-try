@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+bool str(int a, int b, int c)
+{
+	if ((a*a + b * b == c * c) || (a*a == b * b + c * c) || (b*b == a * a + c * c))
+		return true;
+	else
+		return false;
+}
+int main()
+{
+	int a, b, c;
+	bool d;
+	cin >> a >> b >> c;
+	d = str(a, b, c);
+	if (d == true)
+		cout << "True" << endl;
+	else
+		cout << "False" << endl;
+}
