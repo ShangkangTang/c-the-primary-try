@@ -1,0 +1,47 @@
+
+#include<iostream>
+using namespace std;
+
+int Tell(int a)
+{
+	if (a % 2 == 0 || a % 3 == 0 || a % 5 == 0)
+	{
+		if (a % 2 == 0)
+		{
+			if (a / 2 == 1)
+				return 1;
+			else
+			return Tell(a / 2);
+		}
+			
+		else
+			if (a % 3 == 0)
+
+			{
+				if (a / 3 == 1)
+					return 1;
+				else
+				return Tell(a / 3);
+
+			}
+			
+			else
+			{
+				if (a / 5 == 1)
+					return 1;
+				else
+				return Tell(a / 5);
+			}
+	}
+	else
+		return 0;
+}
+int main()
+{
+	int a;
+	cin >> a;
+	if (Tell(a) == 1)
+		cout << "True" << endl;
+	else
+		cout << "False" << endl;
+}
